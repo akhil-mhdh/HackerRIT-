@@ -37,11 +37,11 @@ a{
   border:none;
   height:60px;
   width:100%;
-  margin-right:30px;
   background-color: white;
   font-size:25px;
   color:#59b1e0;
   transition: .5s;
+  text-align: center;
 
 }
 
@@ -54,6 +54,7 @@ a{
   background-color:#59b1e0;
   color:white;
   transition: .5s;
+text-align: center;
 
 }
 .glyphicon-user{
@@ -79,14 +80,129 @@ a{
 }
 }
                       /*-----------------------------------------------------------------------------------*/
+                     		/*This is for the moving logo bar intro tab* inspired from a fav blog*/
 .parallax{
-   background-image: url("http://codingbasics.net/wp-content/uploads/2014/04/computer-programming.jpeg");
-  opacity:.9;
-  height: 90%; 
-    width:100vw;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#wrapper{
+  position: relative;
+  width:100%;
+  min-height:55vw;
+  overflow: hidden;
+}
+
+.layer{
+  position: absolute;
+  width:100vw;
+  min-height: 55vw;
+  overflow: hidden;
+}
+
+.layer .content-wrap{
+  position: absolute;
+  width:100vw;
+  min-height: 55vw;
+}
+
+.layer .content-body{
+  width:25%;
+  position:absolute;
+  top:50%;
+  text-align: center;
+  transform:translateY(-50%);
+  color:#fff;
+}
+
+.layer img{
+  position: absolute;
+  max-width:35%;
+  top:50%;
+  left: 50%;
+  border-radius: 50%;
+  transform:translate(-50%, -50%);
+}
+
+
+.layer h1{
+  font-size:2em;
+  position: absolute;
+  top:40%;  
+}
+
+.bottom{
+  background:#222;
+  z-index:1;
+}
+
+.bottom .content-body{
+  right:5%;
+}
+
+.bottom h1{
+  color:#FDAB00;
+}
+
+.top{
+  background:#eee;
+  color:#222;
+  z-index:2;
+  width:50vw;
+}
+
+.top .content-body{
+  left: 5%;
+  color:#222;
+}
+
+.handle{
+  position: absolute;
+  height: 100%;
+  display: block;
+  background-color: #34B524;
+  width:5px;
+  top:0;
+  left: 50%;
+  z-index:3;
+}
+
+.skewed .handle{
+  top:50%;
+  transform:rotate(30deg) translateY(-50%);
+  height: 200%;
+  transform-origin:top;
+}
+
+.skewed .top{
+  transform: skew(-30deg);
+  margin-left:-1000px;
+  width: calc(50vw + 1000px);
+}
+
+.skewed .top .content-wrap{
+  transform: skew(30deg);
+  margin-left:1000px;
+}
+
+@media(max-width:768px){
+
+	.bottom h1{
+    font-size:85%;
+    left:-20%;
+
+  }
+    .top h1{
+    font-size:85%;
+    right::20%;
+
+  }
+
+  .layer img{
+  	max-width:30%;
+  	top:70%;
+  }
 }
 .kword{
   background-color: #191919;
@@ -123,7 +239,7 @@ a{
   right:0px;
   }
   }
-                                                /*---------------------------------------*/
+                                                /*-------------------gallery tab--------------------*/
 .images {display:none}
 
 
@@ -211,6 +327,7 @@ a{
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 15px;}
 }
+												  /*-------------------footer--------------------*/
 hr{
   width:80%;
 }
