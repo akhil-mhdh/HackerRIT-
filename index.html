@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <meta name="description" content="HackerRIT is platform developed by a team of developers and designers from Rajiv Gandhi Institute of Technology, Kottayam. ">
 	<meta name="keywords" content="HackerRIT,Coding,RIT">
-	<meta name="author" content="Akhi,Vijay,John">
+	<meta name="author" content="Akhi">
   <script src="core.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -24,9 +24,9 @@
 <div id="popup" class="popup">
 <div style="overflow:hidden;">
   <div class="login-box" id="login-box">
-  <h1 class="close">X</h1>
   <h1 id="heading">Login</h1>
     <form action="/account/authL" method="get">
+    <h1 class="close"><input type="reset" name="X" value="X"></h1>
       <input type="text" id="username" name="user" placeholder="Username" required="required" /><h2 id="tag"><h2/>
      <input type="password" name="password" placeholder="Password" required="required" /><h2 id="tag2"><h2/>
      <button type="submit" id="login-button" class="btn btn-primary btn-block btn-large">Login</button>
@@ -37,17 +37,17 @@
   </div>
   </div>
   <div class="login-box" id="sign-box">
-  <h1 class="close">X</h1>
   <h1 id="heading">Sign Up</h1>
     <form action="/account/authS" method="get">
+    <h1 class="close"><input type="reset" name="X" value="X"></h1>
       <input type="text" id="username" name="user" placeholder="Username" required="required" /><h2 id="tag"><h2/>
-      <input type="text" id="email" name="user" placeholder="Email" required="required" /><h2 id="tag"><h2/>
-      <input type="text" id="mob" name="user" placeholder="Mobile No." /><h2 id="tag"><h2/>
+      <input type="email" id="email" name="email" placeholder="Email" required="required" /><h2 id="tag"><h2/>
+      <input type="tel" id="mob" name="mob" placeholder="Mobile No." /><h2 id="tag"><h2/>
      <input type="password" name="password" placeholder="Password" required="required" /><h2 id="tag2"><h2/>
      <button type="submit" id="login-button" class="btn btn-primary btn-block btn-large">Sign Up</button>
     <div id="social" >Login with : <a href="">Google+</a>,    <a href="">Github</a></br>,   <a href="">facebook</a></div>
     </form>
-  </div>
+</div>
 </div>
 
 								<!-------------------------------------------------------------------->
@@ -84,16 +84,16 @@
         <div class="content-body">
           <h1>if(YourFirstStep=="yes"):<br>print("Practice!")</h1>
         </div>
-        <img src="Assets/logo2.jpeg" alt="">
+        <span><object data="Assets/logo1.svg" type="image/svg+xml"></object></span>
       </div>
     </div>
 
     <div class="layer top">
         <div class="content-wrap">
           <div class="content-body">
-          <h1>if(You'RPro=="yes"):<br>print("Compete!")</h1>
+          <h1>if(YourPro=="yes"):<br>print("Compete!")</h1>
           </div>
-          <img src="Assets/logo1.jpg" alt="">
+          <object data="Assets/logo2.svg" type="image/svg+xml"></object>
         </div>
       </div>
 
@@ -245,7 +245,7 @@ cursor:pointer;
   border:1px solid white;
   margin: auto;
   position:absolute;
-  overflow:hidden;
+  overflow:auto;
   top:0;
   bottom:0;
   left:0;
